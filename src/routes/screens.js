@@ -1,0 +1,16 @@
+export const LOADING = 'Loading';
+export const AUTH = 'Auth';
+export const APP = 'App';
+export const LANDING = 'landing';
+export const SIGNIN = 'SignIn';
+export const SIGNUP = 'SignUp';
+export const FORGOT_PASSWORD = 'ForgotPassword';
+export const RESET_PASSWORD = 'ResetPassword';
+export const HOME = 'Home';
+export const ORDER = 'Order';
+export const CART = 'cart';
+export const ACCOUNT = 'Account';
+export const SETTING = 'Setting';
+export const PROFILE = 'Profile';
+export const MAIN_TABS = 'MainTabs';
+export const SETTINGS = 'Settings';
