@@ -3,6 +3,8 @@ import {View, Text} from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 import AppService, { app } from '../../services/AppService';
 import Log from '../../services/Log';
+import ExistThen from '../../components/organisms/ExistThen';
+import HasThen from '../../components/organisms/HasThen';
 
 const Order = ({ navigation }) => {
   const onWillBlur = (e) => {
@@ -18,9 +20,19 @@ const Order = ({ navigation }) => {
       />
       <View>
         <Text>This is order screen</Text>
+        <HasThen data={[]} component={() => <Text>Using functional component props</Text>} />
+
+        <ExistThen data={['a']} component={() => <Text>Using functional component props</Text>} />
+        <ExistThen data={['a']} component={(<Text>Using component props</Text>)} />
+
+        <ExistThen data={{ a: '1' }}>
+          <View>
+            <Text>Using children props</Text>
+          </View>
+        </ExistThen>
       </View>
     </>
-  )
+  );
 };
 
 // Order.navigationOptions = {
